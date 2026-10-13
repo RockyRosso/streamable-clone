@@ -1,6 +1,23 @@
 @import url("../fonts/montserrat.css");
 
 
+body {
+    margin: 0;
+
+    overflow-x: hidden;
+
+    background-color: var(--bg);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+main {
+    min-height: 100vh;
+}
+
+
 p, h1 {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
