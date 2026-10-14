@@ -14,4 +14,45 @@
     padding-top: 56.25%;
 
     overflow: hidden;
+
+    padding-top: 56.25%;
+}
+
+.vid-controls {
+    position: relative;
+    display: flex;
+
+    background-color: var(--container-primary);
+
+    bottom: 0;
+    width: 100%;
+
+    transform: translateY(0);
+}
+
+.vid-controls-btn {
+    background-color: transparent;
+    padding: .6rem;
+    margin: 0;
+}
+
+.vid-progress {
+    $margin: .55rem;
+
+    margin-top: $margin;
+    margin-bottom: $margin;
+
+    position: relative;
+    display: flex;
+
+    flex: 1 1 0;
+
+    background-color: #ffffff80;
+}
+
+.vid-progress-filled {
+    width: 50%;
+    flex-basis: 50%;
+
+    background-color: var(--primary);
 }

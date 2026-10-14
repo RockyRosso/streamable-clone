@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import VideoPlayer from './components/VideoPlayer.vue';
+import VideoPlayer from '../components/VideoPlayer.vue';
 
 </script>
 
@@ -15,7 +15,7 @@ import VideoPlayer from './components/VideoPlayer.vue';
     </main>
 </template>
 
-<style scoped src="../assets/css/base.scss"></style>
+<style src="../../assets/css/base.scss"></style>
 <style scoped lang="scss">
 
 .vid-test {
