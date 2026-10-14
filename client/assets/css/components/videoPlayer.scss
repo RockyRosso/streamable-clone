@@ -30,6 +30,12 @@
     transform: translateY(0);
 }
 
+.vid-control-sec {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .vid-controls-btn {
     background-color: transparent;
     padding: .6rem;
