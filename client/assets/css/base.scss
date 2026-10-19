@@ -10,6 +10,25 @@
     --container-primary: #1e232e;
 }
 
+
+.fade-anim {
+    animation-name: fadeanim;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeanim {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
 html {
     background-color: var(--bg);
 }
