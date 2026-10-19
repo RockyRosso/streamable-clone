@@ -1,4 +1,4 @@
 allowBuilds:
-  '@parcel/watcher': false
+  '@parcel/watcher': true
 minimumReleaseAgeExclude:
   - astro@7.4.1

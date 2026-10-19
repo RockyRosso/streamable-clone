@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, type Ref } from 'vue';
+import { ref } from 'vue';
 
 const isPlaying = ref(false);
 const initialPlay = ref(false);
@@ -98,7 +98,6 @@ function changeProgress(event: MouseEvent) {
     const video = videoPlayer.value;
     const progressBar = videoProgressBar.value;
 
-
     const newTime = (event.offsetX / progressBar.offsetWidth) * video.duration;
     video.currentTime = newTime;
 }
@@ -110,19 +109,23 @@ function mouseMove() {
 
     lastMouseMovement.value = Date.now();
 }
-
 </script>
 
 <template>
-    <div 
-        class="vid-container" 
+    <div
+        class="vid-container"
         @mouseenter="isMouseOnPlayer = true"
         @mouseleave="isMouseOnPlayer = false"
         @mousemove="mouseMove"
     >
-        <video class="vid-src" ref="videoPlayer" @click="togglePlay" @timeupdate="updateProgress"
-            @ended="isPlaying = false">
-            <source src="../../assets/media/javascript.mp4" type="video/mp4" />
+        <video
+            class="vid-src"
+            ref="videoPlayer"
+            @click="togglePlay"
+            @timeupdate="updateProgress"
+            @ended="isPlaying = false"
+        >
+            <source src="../assets/media/javascript.mp4" type="video/mp4" />
         </video>
 
         <div class="vid-controls" ref="videoControls">
@@ -134,7 +137,6 @@ function mouseMove() {
                 <div
                     class="vid-progress"
                     ref="videoProgressBar"
-
                     @mouseleave="mouseDown = false"
                     @mousemove="mouseDown && changeProgress($event)"
                     @mousedown="mouseDown = true"
@@ -171,4 +173,4 @@ function mouseMove() {
     </div>
 </template>
 
-<style src="../../assets/css/components/videoPlayer.scss" />
+<style src="../assets/css/components/videoPlayer.scss" />
