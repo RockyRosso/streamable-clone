@@ -1,3 +1,6 @@
+@use "./presents/container.scss";
+@use "./presents/animations.scss";
+
 @import url('../fonts/montserrat.css');
 
 :root {
@@ -7,22 +10,6 @@
     --primary: #df5420;
 
     --container-primary: #1e232e;
-}
-
-.fade-anim {
-    animation-name: fadeanim;
-    animation-duration: 1s;
-    animation-fill-mode: both;
-}
-
-@keyframes fadeanim {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
 }
 
 html {
@@ -43,16 +30,25 @@ main {
     min-height: 100vh;
 }
 
-p,
 h1,
+h2,
+h3,
+p,
 i {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
+    font-weight: 350;
     font-optical-sizing: auto;
     font-style: normal;
 
     color: var(--txt);
 }
+
+h1,
+h2 
+{
+    font-weight: 500;
+}
+
 
 button {
     font-family: 'Montserrat', sans-serif;
@@ -70,4 +66,10 @@ button {
     margin: 0.6rem;
 
     font-size: 1.2rem;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
